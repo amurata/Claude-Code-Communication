@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Get current branch name
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+
+# Extract issue number from branch name (e.g., feature/123-some-feature -> 123)
+ISSUE_NUMBER=$(echo "$BRANCH_NAME" | grep -o -E '\b[0-9]+\b' | head -1)
+
+# Read the commit message
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+# If issue number exists and commit message doesn't already start with #number
+if [ -n "$ISSUE_NUMBER" ] && ! echo "$COMMIT_MSG" | grep -q "^#$ISSUE_NUMBER"; then
+  # Prepend issue number to commit message
+  echo "#$ISSUE_NUMBER $COMMIT_MSG" > "$COMMIT_MSG_FILE"
+fi
+
+# Run commitlint
+npx --no -- commitlint --edit "$COMMIT_MSG_FILE"

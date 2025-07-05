@@ -1,0 +1,26 @@
+{
+  "name": "claude-code-communication",
+  "version": "1.0.0",
+  "description": "Agent同士がやり取りするtmux環境のデモシステム",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishimoto265/Claude-Code-Communication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishimoto265/Claude-Code-Communication/issues"
+  },
+  "homepage": "https://github.com/nishimoto265/Claude-Code-Communication#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7"
+  }
+}

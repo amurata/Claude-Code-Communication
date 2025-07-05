@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "context7": {
+      "type": "stdio",
+      "command": "/opt/homebrew/bin/npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {}
+    }
+  }
+}

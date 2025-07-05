@@ -12,8 +12,23 @@
       "Bash(then)",
       "Bash(else)",
       "Bash(tmux show-options:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(claude --version)",
+      "Bash(claude auth status)",
+      "Bash(claude config show)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebSearch",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx husky:*)",
+      "Bash(chmod:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7"
+  ]
 }
