@@ -1,20 +1,197 @@
-# ログファイル
+# ============== Dependencies ==============
+node_modules/
+jspm_packages/
+bower_components/
+
+# ============== Environment Variables ==============
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*.env
+!.env.example
+!.env.sample
+
+# ============== Logs ==============
 logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+pnpm-debug.log*
 *.txt
 
-# 一時ファイル
-tmp/
-*.tmp
-*_done.txt
+# ============== Runtime data ==============
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# OS固有
+# ============== Testing ==============
+coverage/
+*.lcov
+.nyc_output
+.grunt
+.cache
+.parcel-cache
+.next/
+out/
+.nuxt/
+dist/
+.cache/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test/
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ============== Build outputs ==============
+build/
+dist/
+out/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+*.tsbuildinfo
+
+# ============== OS Files ==============
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+desktop.ini
+*.lnk
 
-# エディタ
+# ============== Editor/IDE ==============
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 *.swp
 *.swo
 *~
-.vscode/
-.idea/ 
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ============== Package managers ==============
+.npm
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ============== Temporary files ==============
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*_done.txt
+
+# ============== Claude specific ==============
+.claude/session-summary/
+!.claude/ai-development/
+!.claude/settings.json
+!.claude/settings.local.json
+
+# ============== MCP Configuration ==============
+.mcp.json
+
+# ============== Python ==============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+*.egg-info/
+dist/
+*.egg
+MANIFEST
+
+# ============== Ruby ==============
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+.rvmrc
+
+# ============== Java ==============
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+target/
+
+# ============== Certificates ==============
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# ============== Database ==============
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+
+# ============== Misc ==============
+.sass-cache/
+connect.lock
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+composer.lock
+Gemfile.lock
+poetry.lock 

@@ -87,15 +87,15 @@ PANE_TITLES=("boss1" "worker1" "worker2" "worker3")
 for i in {0..3}; do
     PANE_ID="${PANE_IDS[$i]}"
     TITLE="${PANE_TITLES[$i]}"
-    
+
     log_info "設定中: ${TITLE} (${PANE_ID})"
-    
+
     # ペインタイトル設定
     tmux select-pane -t "$PANE_ID" -T "$TITLE"
-    
+
     # 作業ディレクトリ設定
     tmux send-keys -t "$PANE_ID" "cd $(pwd)" C-m
-    
+
     # カラープロンプト設定
     if [ $i -eq 0 ]; then
         # boss1: 赤色
@@ -104,7 +104,7 @@ for i in {0..3}; do
         # workers: 青色
         tmux send-keys -t "$PANE_ID" "export PS1='(\[\033[1;34m\]${TITLE}\[\033[0m\]) \[\033[1;32m\]\w\[\033[0m\]\$ '" C-m
     fi
-    
+
     # ウェルカムメッセージ
     tmux send-keys -t "$PANE_ID" "echo '=== ${TITLE} エージェント ==='" C-m
 done
@@ -155,12 +155,9 @@ echo "     tmux attach-session -t president    # プレジデント確認"
 echo ""
 echo "  2. 🤖 Claude Code起動:"
 echo "     # 手順1: President認証"
-echo "     tmux send-keys -t president 'claude' C-m"
+echo "     tmux send-keys -t president 'claude --dangerously-skip-permissions' C-m"
 echo "     # 手順2: 認証後、multiagent一括起動"
-echo "     # 各ペインのIDを使用してclaudeを起動"
-echo "     tmux list-panes -t multiagent:agents -F '#{pane_id}' | while read pane; do"
-echo "         tmux send-keys -t \"\$pane\" 'claude' C-m"
-echo "     done"
+echo "     for i in {0..3}; do tmux send-keys -t multiagent:0.\$i 'claude --dangerously-skip-permissions' C-m; done"
 echo ""
 echo "  3. 📜 指示書確認:"
 echo "     PRESIDENT: instructions/president.md"
