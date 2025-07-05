@@ -194,4 +194,4 @@ package-lock.json
 pnpm-lock.yaml
 composer.lock
 Gemfile.lock
-poetry.lock 
+poetry.lock
