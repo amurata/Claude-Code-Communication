@@ -23,6 +23,7 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 pnpm-debug.log*
+*.txt
 
 # ============== Runtime data ==============
 pids
@@ -193,4 +194,4 @@ package-lock.json
 pnpm-lock.yaml
 composer.lock
 Gemfile.lock
-poetry.lock 
+poetry.lock

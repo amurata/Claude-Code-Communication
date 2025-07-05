@@ -35,7 +35,12 @@ const customRules = {
 };
 
 module.exports = {
-  extends: ['@commitlint/config-conventional'],
+  parserPreset: {
+    parserOpts: {
+      headerPattern: '^(?:#(\\d+)\\s+)?(\\w+)(?:\\(([^\\)]+)\\))?\\s*:\\s+(.+?)(?:\\s+\\[domain:([^\\]]+)\\])?(?:\\s+\\[tags:([^\\]]+)\\])?$',
+      headerCorrespondence: ['issue', 'type', 'scope', 'subject', 'domain', 'tags']
+    }
+  },
   plugins: [
     {
       rules: customRules
@@ -59,7 +64,7 @@ module.exports = {
         'revert'
       ]
     ],
-    'subject-case': [0],
+    'type-empty': [0],
     'subject-empty': [0],
     'subject-full-stop': [0],
     'header-max-length': [2, 'always', 150],

@@ -35,7 +35,9 @@
       "Bash(git fetch:*)",
       "Bash(git push:*)",
       "Bash(git remote set-url:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(grep:*)",
+      "Bash(chmod:*)"
     ],
     "deny": []
   },
@@ -44,6 +46,7 @@
     "context7",
     "github",
     "memory",
+    "filesystem",
     "sequential-thinking",
     "iterm-mcp",
     "notionApi"
