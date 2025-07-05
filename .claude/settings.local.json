@@ -23,12 +23,23 @@
       "Bash(npx husky:*)",
       "Bash(chmod:*)",
       "Bash(git checkout:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "mcp__filesystem__read_file",
+      "mcp__memory__create_entities",
+      "mcp__memory__create_relations",
+      "Bash(mv:*)",
+      "Bash(git rm:*)"
     ],
     "deny": []
   },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
-    "context7"
+    "context7",
+    "github",
+    "memory",
+    "sequential-thinking",
+    "iterm-mcp",
+    "notionApi"
   ]
 }
