@@ -36,6 +36,9 @@ const customRules = {
 
 module.exports = {
   extends: ['@commitlint/config-conventional'],
+  
+  // カスタムパーサー: 自動追加される#123とdomain/tagsタグに対応
+  // extends の後に定義することでデフォルトパーサーを上書き
   parserPreset: {
     parserOpts: {
       headerPattern: '^(?:#(\\d+)\\s+)?(\\w+)(?:\\(([^\\)]+)\\))?\\s*:\\s+(.+?)(?:\\s+\\[domain:([^\\]]+)\\])?(?:\\s+\\[tags:([^\\]]+)\\])?$',
@@ -65,6 +68,8 @@ module.exports = {
         'revert'
       ]
     ],
+    // type-empty無効化: カスタムパーサーが動作するまでの間、
+    // デフォルトパーサーがtypeを検出できずエラーになるため
     'type-empty': [0],
     'subject-empty': [0],
     'subject-full-stop': [0],
