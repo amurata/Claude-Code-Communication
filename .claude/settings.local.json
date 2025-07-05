@@ -37,7 +37,13 @@
       "Bash(git remote set-url:*)",
       "Bash(git stash:*)",
       "Bash(grep:*)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(node:*)",
+      "mcp__github__get_pull_request_files",
+      "Bash(gh repo view:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr merge:*)"
     ],
     "deny": []
   },
