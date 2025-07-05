@@ -35,6 +35,7 @@ const customRules = {
 };
 
 module.exports = {
+  extends: ['@commitlint/config-conventional'],
   parserPreset: {
     parserOpts: {
       headerPattern: '^(?:#(\\d+)\\s+)?(\\w+)(?:\\(([^\\)]+)\\))?\\s*:\\s+(.+?)(?:\\s+\\[domain:([^\\]]+)\\])?(?:\\s+\\[tags:([^\\]]+)\\])?$',
